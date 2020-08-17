@@ -202,6 +202,8 @@ and shutdown the system by the command `shutdown now`
 
 #### If something goes wrong dont worry! You can re-enter this exit scenario by again booting the live USB and mounting the `/dev/sda` to `/mnt` and using `arch-chroot` command to enter the system.
 
+#### Things to do after installing:- https://github.com/Lend27/linuxstuff
+
 Thanks!
 
 
