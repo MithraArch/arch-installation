@@ -70,7 +70,7 @@ Mount the root partition that you have created by it s name ex:-(/dev/sda1)
 
 `mount /dev/sda1 /mnt`
 
-`pacstrap /mnt base linux linux-firmware vim nano`
+`pacstrap /mnt base linux linux-firmware vim nano sudo vi`
 
 Almost half-way done!
 
