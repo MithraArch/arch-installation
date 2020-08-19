@@ -122,7 +122,7 @@ Create a `/etc/hostname` file and add the hostname entry to this file.
 Check video ([https://www.youtube.com/watch?v=P4IV5BYPiPs](https://www.youtube.com/watch?v=P4IV5BYPiPs))
 
 Adding user:-
-`useradd -m -g users -s /bin/zsh *username`
+`useradd -m -g users -G wheel *username`
 
 Password for the user:-
 `passwd *username`
