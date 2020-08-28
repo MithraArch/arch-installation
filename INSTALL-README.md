@@ -24,11 +24,11 @@ Now select the main disk which you want to edit the partitions
 ## Checking UEFI or Legacy file system
 
 
->If this directory exists then it is EFI/UEFI system, if not then it is Legacy/MBR
+>If this directory exists then your system is EFI/UEFI enabled, if not then it is Legacy/MBR
 
 `ls /sys/firmware/efi/efivars`
 
-You need to create a +512M partition for UEFI or SKIP this step. 
+You need to create a +512M partition for UEFI. Skip if non-UEFI 
 
 >Partition Type :- EFI System
 
@@ -49,7 +49,7 @@ For Legacy:-
 
 >If you have WiFi feature, connect WiFi by issuing $ wifi-menu
 
->Ping Google to verify connecticity.
+>Ping Google to verify connectivity.
 >$ ping google.com
 
 ##  Select Pacman Server
@@ -65,12 +65,12 @@ For Legacy:-
 The closest pacman server is set! Great!
 
 
-##  Installing Arch *finally!
+##  Installing Arch!
 Mount the root partition that you have created by it s name ex:-(/dev/sda1)
 
 `mount /dev/sda1 /mnt`
 
-`pacstrap /mnt base linux linux-firmware vim nano sudo vi`
+`pacstrap /mnt base linux linux-firmware vim nano sudo vi git`
 
 Almost half-way done!
 
@@ -90,17 +90,20 @@ Find your timezone from here:-
 Apply the timezone from here:-
 `timedatectl set-timezone *your timezone*`
 
-##  Setting Locale! *important!!!
->Before issuing any locale commands install sudo by :- `sudo pacman -S sudo`. Now editing the /etc/locale.gen file with nano, and un-commenting out your locale.
+Enable NTP:-
+`timedatectl set-ntp true` 
+
+##  Setting Locale! *important*!!!
+>Before issuing any locale commands install sudo by :- `sudo pacman -S sudo` just to make sure its installed. *Now editing the /etc/locale.gen file with nano, and un-commenting out your locale*.
 
 THEN
 
 `locale-gen`
 verify the output!
 
-`echo LANG=en_GB.UTF-8 > /etc/locale.conf`
+`echo LANG=en_US.UTF-8 > /etc/locale.conf`
 
-`export LANG=en_GB.UTF-8`
+`export LANG=en_US.UTF-8`
 
 ##  Network Configuration!
 
