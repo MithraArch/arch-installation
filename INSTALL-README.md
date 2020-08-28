@@ -178,6 +178,35 @@ From here every installation may vary.
 
 ##  Installing Desktop Environment!
 
+## Recommended Tips for a perfect installation
+Install home directories with `sudo pacman -S xdg-user-dirs`
+
+Audio functions to work properly you need to install ```sudo pacman -S pulseaudio pavucontrol pulseaudio-alsa alsa-utils```
+
+Installing Yaourt (Temporarily)
+
+`sudo nano /etc/pacman.conf`
+add to bottom of file:
+```
+[archlinuxfr]
+SigLevel = Never
+Server = http://repo.archlinux.fr/$arch
+```
+
+Installing pamac or yay any other AUR helpers.
+pamac (GUI and NON-GUI) :- 
+`yaourt -S pamac-aur`
+
+yay (NON-GUI) (Recommended) :- 
+package `git` required for installing.
+```
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
+Uncommenting multilib in `/etc/pacman.conf`
+
+
 ####  GNOME installation:-
 
 >Installing Xorg:-
