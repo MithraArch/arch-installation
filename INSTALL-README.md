@@ -178,7 +178,29 @@ From here every installation may vary.
 
 ##  Installing Desktop Environment!
 
-## Recommended Tips for a perfect installation
+####  GNOME installation:-
+
+>Installing Xorg:-
+
+`pacman -S xorg`
+
+>Install GNOME itself:-
+
+`pacman -S gnome`
+
+After installing everything till here. You need to start the services of them by issuing the commands:-
+
+```
+systemctl start gdm.service
+systemctl enable gdm.service
+systemctl enable NetworkManager.service
+```
+
+Now exit from chroot with the command `exit`
+
+and shutdown the system by the command `shutdown now`
+
+## Recommended Tips for a perfect installation (Post Install)
 Install home directories with `sudo pacman -S xdg-user-dirs`
 
 Audio functions to work properly you need to install ```sudo pacman -S pulseaudio pavucontrol pulseaudio-alsa alsa-utils```
@@ -207,29 +229,8 @@ makepkg -si
 Uncommenting multilib in `/etc/pacman.conf`
 
 
-####  GNOME installation:-
+#### If something goes wrong dont worry! You can re-enter this exit scenario by again booting the live USB and mounting the `/dev/sda(linux partition)` to `/mnt` and using `arch-chroot /mnt` command to enter the system.
 
->Installing Xorg:-
-
-`pacman -S xorg`
-
->Install GNOME itself:-
-
-`pacman -S gnome`
-
-After installing everything till here. You need to start the services of them by issuing the commands:-
-
-```
-systemctl start gdm.service
-systemctl enable gdm.service
-systemctl enable NetworkManager.service
-```
-
-Now exit from chroot with the command `exit`
-
-and shutdown the system by the command `shutdown now`
-
-#### If something goes wrong dont worry! You can re-enter this exit scenario by again booting the live USB and mounting the `/dev/sda` to `/mnt` and using `arch-chroot` command to enter the system.
 
 #### Things to do after installing:- https://github.com/Lend27/linuxstuff
 
