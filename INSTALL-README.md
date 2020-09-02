@@ -94,7 +94,7 @@ Enable NTP:-
 `timedatectl set-ntp true` 
 
 ##  Setting Locale! *important*!!!
->Before issuing any locale commands install sudo by :- `sudo pacman -S sudo` just to make sure its installed. *Now editing the /etc/locale.gen file with nano, and un-commenting out your locale*.
+>Before issuing any locale commands install sudo by :- `pacman -S sudo` just to make sure its installed. *Now editing the /etc/locale.gen file with nano, and un-commenting out your locale*.
 
 THEN
 
