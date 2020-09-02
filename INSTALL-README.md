@@ -143,7 +143,7 @@ To install the graphic driver you can do it right from here but I recommend doin
 
 AMD :- `pacman -S xf86-video-amdgpu`
 NVIDIA :- `pacman -S xf86-video-nouveau`
-Intel :- `pacman -S xf86-vidro-intel`
+Intel :- `pacman -S xf86-video-intel`
 
 ##  Install Grub bootloader
 
