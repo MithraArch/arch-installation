@@ -150,8 +150,11 @@ Intel :- `pacman -S xf86-video-intel`
 ####  For UEFI :-
 >Make sure you are still in arch-chroot. Packages:-
 
-`pacman -S grub efibootmgr`
+`pacman -S grub efibootmgr os-prober`
 >Create a directory where EFI will be mounted
+
+>Run os-prober as root
+`sudo os-prober`
 
 `mkdir /boot/efi`
 >Now, mount the ESP partition
