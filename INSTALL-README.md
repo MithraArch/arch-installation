@@ -1,6 +1,6 @@
 # Arch Installation
 
-Hi! future Mithra! Follow this guide to perfectly install Arch linux onto your system. Read the instructions carefully and don't miss the Flagged ones! Enjoy Arching! :P
+Follow this guide to perfectly install Arch linux onto your system. Read the instructions carefully and don't miss the Flagged ones! Enjoy Arching! :P
 
 ## Files Required
 
